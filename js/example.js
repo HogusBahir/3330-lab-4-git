@@ -2,6 +2,21 @@ $(function() {
   
   // TODO: Create a list of JS Object each representing a game. 
   // Use the data contained in the <ul> to build this list of game titles.
+const games = [
+  {
+    "title": "The Legend of Zelda: Breath of the Wild",
+  },
+  {
+    "title": "Minecraft",
+  },
+  {
+    "title": "Super Mario Odyssey",
+  },
+  {
+    "title": "God Of War Ragnarok",
+  },
+]
+
 
 
   var gameList, newItemForm, newItemButton;
@@ -16,8 +31,18 @@ $(function() {
   // To do so, create a function that loops through each object in the game list, 
   // create a new node "list item" holding the game title and 
   // inject the new node inside the <ul>.
+function loadGames(){
+  // const ulObj = document.getElementById("gameList");
+  //You may use this, but we already have a jQuery version used 
+  //called gameList = $('ul');
 
-
+  games.forEach( game => {
+    const listItem = $("<li>");
+    listItem.html(`${game.title}`);
+    gameList.append(listItem);
+  })
+}
+loadGames();
 
   function updateCount() {                      
     var items = $('li').length; 
