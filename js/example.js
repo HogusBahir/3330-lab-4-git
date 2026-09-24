@@ -15,6 +15,9 @@ const games = [
   {
     "title": "God Of War Ragnarok",
   },
+  {
+    "title": "Halo Infitnite",
+  },
 ]
 
 
